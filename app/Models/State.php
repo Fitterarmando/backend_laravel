@@ -17,4 +17,9 @@ class State extends Model
     {
         return $this->hasMany(Todo::class);
     }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

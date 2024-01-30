@@ -16,4 +16,14 @@ class Todo extends Model
         'user_id',
         'state_id'
     ];
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
+
+    public function states()
+    {
+        return  $this->hasOne(State::class);
+    }
 }
